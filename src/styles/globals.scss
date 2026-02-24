@@ -1,0 +1,63 @@
+@use "./variables" as *;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --primary: #cf0040;
+  --secondary: #6b7280;
+  --border: #e5e7eb;
+  --radius: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // --background: #0a0a0a;
+    // --foreground: #ededed;
+    // --primary: #3b82f6;
+    // --primary-foreground: #ffffff;
+    // --secondary: #6b7280;
+    // --secondary-foreground: #ffffff;
+    // --muted: #262626;
+    // --muted-foreground: #a3a3a3;
+    // --accent: #262626;
+    // --accent-foreground: #ededed;
+    // --destructive: #ef4444;
+    // --destructive-foreground: #ffffff;
+    // --border: #262626;
+    // --input: #262626;
+    // --ring: #3b82f6;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 10px;
+}
+
+body {
+  color: $text-color;
+  background: var(--background);
+  font-family: var(--font-hind), var(--font-noto-sans-jp), sans-serif;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} 
